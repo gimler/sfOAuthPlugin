@@ -5,6 +5,8 @@ authorization features over oauth for `sfDoctrineGuardPlugin`.
 
 ## Installation ##
 
+This plugin requires oauth pecl extension for oauth 1.0. The propel version is not implemented yet.
+
   * Install the plugin (via a package)
 
         symfony plugin:install sfOAuthPlugin
