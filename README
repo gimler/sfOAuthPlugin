@@ -1,0 +1,40 @@
+# sfOAuth plugin #
+
+The `sfOAuthPlugin` is a symfony plugin that provides authentication and
+authorization features over oauth for `sfDoctrineGuardPlugin`.
+
+## Installation ##
+
+  * Install the plugin (via a package)
+
+        symfony plugin:install sfOAuthPlugin
+
+  * Install the plugin (via a Subversion checkout)
+  
+        svn co http//svn.symfony-project.com/plugins/sfOAuthPlugin/branch/1.4 plugins/sfOAuthPlugin
+
+  * Activate the plugin in the `config/ProjectConfiguration.class.php`
+  
+        [php]
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            $this->enablePlugins(array(
+              'sfDoctrinePlugin', 
+              'sfDoctrineGuardPlugin',
+              'sfOAuthPlugin',
+              '...'
+            ));
+          }
+        }
+
+  * Enable one or more modules in your `settings.yml` (optional)
+
+        all:
+          .settings:
+            enabled_modules:      [default, sfAuth, sfOAuth]
+
+  * Clear you cache
+
+        symfony cc
