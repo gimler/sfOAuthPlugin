@@ -66,7 +66,7 @@ class BasesfOAuthActions extends sfActions
 
     // check if user exist
     $sfGuardUser = Doctrine_Core::getTable('sfGuardUser')
-      ->findOneByEmailAddress($email);
+      ->retrieveByUsernameOrEmailAddress($email);
     //TODO: add better error handling no 404 redirect to login with user flash message;
     //TODO: add auto register event
     $this->forward404Unless($sfGuardUser);
